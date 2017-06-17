@@ -1,1 +1,1 @@
-add_lunch_combo lineage_cube_iwork8ultimate-userdebug
+add_lunch_combo lineage_x80plus_h5c5-userdebug
