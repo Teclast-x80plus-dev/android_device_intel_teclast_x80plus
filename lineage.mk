@@ -19,5 +19,5 @@ PRODUCT_RELEASE_NAME := Teclast X80 Plus(H5C5)
 
 # Set build fingerprint / ID / Product Name ect.
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="cht_cr_mrd-user 5.1 LMY47I eng.jim.20160329.202714 release-keys" \
-    BUILD_FINGERPRINT="intel/cht_cr_mrd/cht_cr_mrd:5.1/LMY47I/jim03292029:user/release-keys"
+    PRIVATE_BUILD_DESC="cht_cr_mrd-userdebug 5.1 LMY47I eng.zhangmo.20160324.165841 release-keys" \
+    BUILD_FINGERPRINT="intel/cht_cr_mrd/cht_cr_mrd:5.1/LMY47I/zhangmo03241659:userdebug/release-keys"
