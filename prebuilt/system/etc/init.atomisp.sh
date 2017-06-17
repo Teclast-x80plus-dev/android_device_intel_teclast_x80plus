@@ -6,10 +6,9 @@
 # we cannot do this from init.rc directly because atomisp wants to
 # make a request_firmware call from its module init function, which
 # init won't service until the module load completes!
-modules=`getprop ro.modules.location`
-insmod $modules/videobuf-core.ko
-insmod $modules/videobuf-vmalloc.ko
-insmod $modules/ov8858_driver.ko
-insmod $modules/ov2680.ko
-#insmod $modules/lm3642.ko
-insmod $modules/atomisp-css2401a0_v21.ko dypool_enable=y
+insmod /system/lib/modules/videobuf-core.ko
+insmod /system/lib/modules/videobuf-vmalloc.ko
+insmod /system/lib/modules/ov8858_driver.ko
+insmod /system/lib/modules/ov2680.ko
+#insmod /system/lib/modules/lm3642.ko
+insmod /system/lib/modules/atomisp-css2401a0_v21.ko dypool_enable=y
