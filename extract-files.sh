@@ -18,7 +18,7 @@
 set -e
 
 # Required!
-export DEVICE=cube_iwork8ultimate
+export DEVICE=x80plus_h5c5
 export DEVICE_COMMON=cherrytrail-common
 export VENDOR=intel
 

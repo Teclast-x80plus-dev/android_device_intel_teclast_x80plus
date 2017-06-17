@@ -17,16 +17,16 @@
 # Inherit from common
 $(call inherit-product, device/intel/cherrytrail-common/cherrytrail.mk)
 
-DEVICE_PACKAGE_OVERLAYS += device/intel/cube_iwork8ultimate/overlay
+DEVICE_PACKAGE_OVERLAYS += device/intel/teclast/x80plus_h5c5/overlay
 
-$(call inherit-product-if-exists, vendor/intel/cube_iwork8ultimate/cube_iwork8ultimate-vendor.mk)
+$(call inherit-product-if-exists, vendor/intel/x80plus_h5c5/x80plus_h5c5-vendor.mk)
 
 PRODUCT_AAPT_PREF_CONFIG := mdpi
 
 # Ramdisk
 PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,device/intel/cube_iwork8ultimate/ramdisk,root)
+    $(call find-copy-subdir-files,*,device/intel/teclast/x80plus_h5c5/ramdisk,root)
 
 # Prebuilt
 PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,device/intel/cube_iwork8ultimate/prebuilt/system,system)
+    $(call find-copy-subdir-files,*,device/intel/teclast/x80plus_h5c5/prebuilt/system,system)
