@@ -20,7 +20,9 @@
                          VideoEncoderCap+,
                          AudioEncoderCap+,
                          VideoDecoderCap,
-                         AudioDecoderCap)>
+                         AudioDecoderCap,
+                         VideoEditorCap,
+                         ExportVideoProfile)>
 <!ELEMENT CamcorderProfiles (EncoderProfile+, ImageEncoding+, ImageDecoding, Camera)>
 <!ATTLIST CamcorderProfiles cameraId (0|1) #REQUIRED>
 <!ELEMENT EncoderProfile (Video, Audio)>
@@ -72,6 +74,16 @@
 <!ELEMENT AudioDecoderCap EMPTY>
 <!ATTLIST AudioDecoderCap name (wma) #REQUIRED>
 <!ATTLIST AudioDecoderCap enabled (true|false) #REQUIRED>
+<!ELEMENT VideoEditorCap EMPTY>
+<!ATTLIST VideoEditorCap maxInputFrameWidth CDATA #REQUIRED>
+<!ATTLIST VideoEditorCap maxInputFrameHeight CDATA #REQUIRED>
+<!ATTLIST VideoEditorCap maxOutputFrameWidth CDATA #REQUIRED>
+<!ATTLIST VideoEditorCap maxOutputFrameHeight CDATA #REQUIRED>
+<!ATTLIST VideoEditorCap maxPrefetchYUVFrames CDATA #REQUIRED>
+<!ELEMENT ExportVideoProfile EMPTY>
+<!ATTLIST ExportVideoProfile name (h263|h264|m4v) #REQUIRED>
+<!ATTLIST ExportVideoProfile profile CDATA #REQUIRED>
+<!ATTLIST ExportVideoProfile level CDATA #REQUIRED>
 ]>
 <!--
      This file is used to declare the multimedia profiles and capabilities
@@ -94,13 +106,25 @@
                    channels="2" />
         </EncoderProfile>
 
+        <EncoderProfile quality="high" fileFormat="3gp" duration="60">
+            <Video codec="h264"
+                   bitRate="8000000"
+                   width="1280"
+                   height="720"
+                   frameRate="30" />
+
+            <Audio codec="aac"
+                   bitRate="192000"
+                   sampleRate="48000"
+                   channels="2" />
+        </EncoderProfile>
 
         <EncoderProfile quality="qcif" fileFormat="3gp" duration="60">
             <Video codec="h264"
-					bitRate="256000"
-					width="176"
-					height="144"
-					frameRate="30" />
+                    bitRate="256000"
+                    width="176"
+                    height="144"
+                    frameRate="30" />
 
             <Audio codec="aac"
                     bitRate="128000"
@@ -144,7 +168,7 @@
                    bitRate="128000"
                    sampleRate="48000"
                    channels="2" />
-       </EncoderProfile>
+        </EncoderProfile>
 
         <EncoderProfile quality="720p" fileFormat="3gp" duration="60">
             <Video codec="h264"
@@ -159,27 +183,37 @@
                    channels="2" />
         </EncoderProfile>
 
-
         <EncoderProfile quality="timelapselow" fileFormat="3gp" duration="60">
             <Video codec="h264"
                    bitRate="256000"
                    width="176"
                    height="144"
                    frameRate="30" />
-
             <Audio codec="aac"
                    bitRate="128000"
                    sampleRate="48000"
                    channels="2" />
         </EncoderProfile>
 
+        <EncoderProfile quality="timelapsehigh" fileFormat="3gp" duration="60">
+            <Video codec="h264"
+                   bitRate="8000000"
+                   width="1280"
+                   height="720"
+                   frameRate="30" />
+
+            <Audio codec="aac"
+                   bitRate="192000"
+                   sampleRate="48000"
+                   channels="2" />
+        </EncoderProfile>
 
         <EncoderProfile quality="timelapseqcif" fileFormat="3gp" duration="60">
             <Video codec="h264"
-					bitRate="256000"
-					width="176"
-					height="144"
-					frameRate="30" />
+                    bitRate="256000"
+                    width="176"
+                    height="144"
+                    frameRate="30" />
 
             <Audio codec="aac"
                     bitRate="128000"
@@ -226,7 +260,7 @@
                    channels="1" />
         </EncoderProfile>
 
-        <EncoderProfile quality="timelapse720p" fileFormat="3gp" duration="30">
+        <EncoderProfile quality="timelapse720p" fileFormat="3gp" duration="60">
             <Video codec="h264"
                    bitRate="8000000"
                    width="1280"
@@ -495,6 +529,13 @@
         minBitRate="16000" maxBitRate="192000"
         minSampleRate="16000" maxSampleRate="48000"
         minChannels="1" maxChannels="2" />
+
+    <VideoEditorCap maxInputFrameWidth="1920" maxInputFrameHeight="1088"
+        maxOutputFrameWidth="1920" maxOutputFrameHeight="1088" maxPrefetchYUVFrames="6"/>
+
+    <ExportVideoProfile name="h263" profile="1" level="1" />
+    <ExportVideoProfile name="h264" profile="1" level="32768" />
+    <ExportVideoProfile name="m4v" profile="1" level="16" />
 
     <!--
         FIXME:
