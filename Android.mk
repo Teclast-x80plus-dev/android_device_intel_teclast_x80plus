@@ -16,6 +16,6 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifeq ($(TARGET_DEVICE),cube_iwork8ultimate)
+ifeq ($(TARGET_DEVICE),x80plus_h5c5)
 include $(call all-makefiles-under,$(LOCAL_PATH))
 endif

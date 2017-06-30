@@ -7,17 +7,17 @@ TARGET_BOOTANIMATION_HALF_RES := true
 $(call inherit-product, vendor/cm/config/common_full_tablet_wifionly.mk)
 
 # Inherit device configuration
-$(call inherit-product, device/intel/cube_iwork8ultimate/cube_iwork8ultimate.mk)
+$(call inherit-product, device/intel/teclast/x80plus_h5c5/x80plus_h5c5.mk)
 
 # Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := cube_iwork8ultimate
-PRODUCT_NAME := cm_cube_iwork8ultimate
-PRODUCT_BRAND := Cube
-PRODUCT_MODEL := I1-T
-PRODUCT_MANUFACTURER := Cube
-PRODUCT_RELEASE_NAME := Cube iWork8 Ultimate
+PRODUCT_DEVICE := x80plus_h5c5
+PRODUCT_NAME := cm_x80plus_h5c5
+PRODUCT_BRAND := Teclast
+PRODUCT_MODEL := X80 Plus(H5C5)
+PRODUCT_MANUFACTURER := Teclast
+PRODUCT_RELEASE_NAME := Teclast X80 Plus(H5C5)
 
 # Set build fingerprint / ID / Product Name ect.
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="cht_cr_mrd-user 5.1 LMY47I eng.jim.20160329.202714 release-keys" \
-    BUILD_FINGERPRINT="intel/cht_cr_mrd/cht_cr_mrd:5.1/LMY47I/jim03292029:user/release-keys"
+    PRIVATE_BUILD_DESC="cht_cr_mrd-userdebug 5.1 LMY47I eng.zhangmo.20160324.165841 release-keys" \
+    BUILD_FINGERPRINT="intel/cht_cr_mrd/cht_cr_mrd:5.1/LMY47I/zhangmo03241659:userdebug/release-keys"

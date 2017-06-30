@@ -17,10 +17,10 @@
 # Inherit from common
 -include device/intel/cherrytrail-common/BoardConfigCommon.mk
 
-DEVICE_PATH := device/intel/cube_iwork8ultimate
+DEVICE_PATH := device/intel/teclast/x80plus_h5c5
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := cht_cr_mrd,cube_iwork8ultimate
+TARGET_OTA_ASSERT_DEVICE := cht_cr_mrd,x80plus_h5c5
 
 # Kernel
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/kernel
