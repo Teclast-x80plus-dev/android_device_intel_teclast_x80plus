@@ -19,7 +19,7 @@ $(call inherit-product, device/intel/cherrytrail-common/cherrytrail.mk)
 
 DEVICE_PACKAGE_OVERLAYS += device/intel/teclast/x80plus_h5c5/overlay
 
-$(call inherit-product-if-exists, vendor/intel/teclast/x80plus_h5c5/x80plus_h5c5-vendor.mk)
+$(call inherit-product-if-exists, vendor/intel/x80plus_h5c5/x80plus_h5c5-vendor.mk)
 
 PRODUCT_AAPT_PREF_CONFIG := mdpi
 
