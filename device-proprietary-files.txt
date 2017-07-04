@@ -6,7 +6,7 @@ etc/parameter-framework/AudioParameterFramework.xml
 etc/parameter-framework/Settings/Audio/AudioConfigurableDomains.xml
 etc/parameter-framework/Settings/Route/RouteConfigurableDomains.xml
 etc/parameter-framework/Structure/Audio/AudioClass.xml
-etc/parameter-framework/Structure/Audio/NUVOTON_NAU88L24Subsystem.xml
+etc/parameter-framework/Structure/Audio/Realtek5645Subsystem.xml
 etc/parameter-framework/Structure/Audio/SstSubsystem.xml
 etc/parameter-framework/Structure/Route/RouteSubsystem.xml
 
